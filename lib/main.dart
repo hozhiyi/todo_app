@@ -14,33 +14,38 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: Colors.orange[200],
-          appBar: AppBar(
-            title: Text("how r u"),
-            backgroundColor: Colors.amber[700],
-            leading: Icon(Icons.healing_sharp),
-            actions: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.sports_esports_outlined),
+        backgroundColor: Colors.orange[200],
+        appBar: AppBar(
+          title: Text("how r u"),
+          backgroundColor: Colors.amber[700],
+          leading: Icon(Icons.healing_sharp),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.sports_esports_outlined),
+            ),
+          ],
+        ),
+        body: Column(
+          children: [
+            Expanded(
+              child: Container(
+                color: Colors.amber[800],
               ),
-            ],
-          ),
-          body: Center(
-            child: Container(
-                height: 300,
-                width: 300,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                padding: EdgeInsets.all(34),
-                child: Icon(
-                  Icons.houseboat,
-                  color: Colors.amber[900],
-                  size: 99,
+            ),
+            Expanded(
+                flex: 3,
+                child: Container(
+                  color: Colors.amber[700],
                 )),
-          )),
+            Expanded(
+              child: Container(
+                color: Colors.amber[500],
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
